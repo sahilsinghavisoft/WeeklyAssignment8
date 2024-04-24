@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    container_name: app1
+    build:
+      context: ..
+      dockerfile: ./dockerfiles/Dockerfile
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+  db:
+    image: mongo1
+    container_name: mongo1
+    ports:
+      - "27017:27017"
