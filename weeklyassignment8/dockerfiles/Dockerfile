@@ -10,8 +10,10 @@ COPY ../poetry.lock /weeklyassignment8//
 COPY ../pyproject.toml /weeklyassignment8
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-root --no-ansi 
-COPY .. .
+COPY ../ .
+
 
 
 CMD ["uvicorn", "ml_deployment.classification_application:app", "--host", "0.0.0.0", "--port", "8000"]
+
 

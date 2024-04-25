@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
 class InputFeatures(BaseModel):
-    battery_power: float
-    ram: float
-    px_height: float
-    px_width: float
-    sc_h: float
-    sc_w: float
-    talk_time: float
-    three_g: float
-    touch_screen: float
-    wifi: float
+    battery_power: int
+    fc: int
+    int_memory: int
+    mobile_wt: int
+    n_cores: int
+    pc: int
+    ram: int
+    talk_time: int
+    sc_size: float
+    pixels: int
