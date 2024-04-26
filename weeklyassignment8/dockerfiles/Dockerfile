@@ -12,8 +12,6 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --no-root --no-ansi 
 COPY ../ .
 
-
-
 CMD ["uvicorn", "ml_deployment.classification_application:app", "--host", "0.0.0.0", "--port", "8000"]
 #CMD ["streamlit", "run", "streamlit_app/app.py", "--server.port", "8501"]
 
